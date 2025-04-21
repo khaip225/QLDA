@@ -1,3 +1,7 @@
+<<<<<<< HEAD
 
 # QLDA_22NH12_G11_THEFIREFLIES
 
+=======
+# QLDA
+>>>>>>> e2cc7ee318239b2fde9018576fe9660230059dde

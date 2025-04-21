@@ -148,3 +148,14 @@ Error while reading from 127.0.0.1:11000 : (104, 'Connection reset by peer')
 2025-04-15 09:10:03,931 Cleaning registries for queue: home-thanhkhaii-frappe-nutrition-frappe-nutrition:default
 2025-04-15 09:10:03,933 Cleaning registries for queue: home-thanhkhaii-frappe-nutrition-frappe-nutrition:long
 2025-04-15 09:11:08,966 Worker af1253fcc5bc494991909c1d39860e92 [PID 1326]: warm shut down requested
+2025-04-21 23:19:33,321 Worker rq:worker:b9d73249d14c4f109408333c15615845 started with PID 1320, version 1.15.1
+2025-04-21 23:19:33,322 Subscribing to channel rq:pubsub:b9d73249d14c4f109408333c15615845
+2025-04-21 23:19:33,325 *** Listening on home-thanhkhaii-frappe-nutrition-frappe-nutrition:short, home-thanhkhaii-frappe-nutrition-frappe-nutrition:default, home-thanhkhaii-frappe-nutrition-frappe-nutrition:long...
+2025-04-21 23:19:33,327 Cleaning registries for queue: home-thanhkhaii-frappe-nutrition-frappe-nutrition:short
+2025-04-21 23:19:33,331 Cleaning registries for queue: home-thanhkhaii-frappe-nutrition-frappe-nutrition:default
+2025-04-21 23:19:33,334 Cleaning registries for queue: home-thanhkhaii-frappe-nutrition-frappe-nutrition:long
+2025-04-21 23:19:48,102 Worker b9d73249d14c4f109408333c15615845 [PID 1320]: warm shut down requested
+2025-04-21 23:20:08,504 Worker rq:worker:68f2eb06294d4b2194d8e11816cd7d16 started with PID 1928, version 1.15.1
+2025-04-21 23:20:08,504 Subscribing to channel rq:pubsub:68f2eb06294d4b2194d8e11816cd7d16
+2025-04-21 23:20:08,506 *** Listening on home-thanhkhaii-frappe-nutrition-frappe-nutrition:short, home-thanhkhaii-frappe-nutrition-frappe-nutrition:default, home-thanhkhaii-frappe-nutrition-frappe-nutrition:long...
+2025-04-21 23:26:25,251 Worker 68f2eb06294d4b2194d8e11816cd7d16 [PID 1928]: warm shut down requested
