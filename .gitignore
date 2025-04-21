@@ -1,31 +1,17 @@
-# Frappe-specific ignores
-sites/
-.env
 *.pyc
-__pycache__/
-*.tar.gz
-*.sql.gz
-*.log
-
-# Node.js dependencies
-node_modules/
-npm-debug.log
-
-# Python virtual environment
-env/
-venv/
-
-# Editor and IDE files
-.vscode/
-.idea/
-*.sublime-project
-*.sublime-workspace
-
-# OS-generated files
-.DS_Store
-Thumbs.db
-
-# Temporary files
-*.bak
 *.swp
-*~
+*.swo
+*.log
+*.db
+*.sqlite3
+*.pid
+*.tar.gz
+*.zip
+
+env/
+node_modules/
+sites/*/private/*
+sites/assets/
+sites/*/backups/
+sites/common_site_config.json
+sites/*/site_config.json
