@@ -103,3 +103,16 @@
 2025-04-15 09:10:03,516 INFO /home/thanhkhaii/frappe-nutrition/frappe-nutrition/env/bin/bench schedule
 2025-04-15 09:10:03,532 INFO /home/thanhkhaii/frappe-nutrition/frappe-nutrition/env/bin/bench watch
 2025-04-15 09:23:08,607 INFO /home/thanhkhaii/frappe-nutrition/frappe-nutrition/env/bin/bench new-doctype Nutrition Profile --single
+2025-04-20 12:00:02,136 INFO /home/thanhkhaii/frappe-env/bin/bench --verbose --site all backup
+2025-04-21 23:19:24,525 INFO /home/thanhkhaii/frappe-nutrition/frappe-nutrition/env/bin/bench --version
+2025-04-21 23:19:31,911 INFO /home/thanhkhaii/frappe-nutrition/frappe-nutrition/env/bin/bench start
+2025-04-21 23:19:32,433 INFO /home/thanhkhaii/frappe-nutrition/frappe-nutrition/env/bin/bench schedule
+2025-04-21 23:19:32,444 INFO /home/thanhkhaii/frappe-nutrition/frappe-nutrition/env/bin/bench watch
+2025-04-21 23:19:32,445 INFO /home/thanhkhaii/frappe-nutrition/frappe-nutrition/env/bin/bench serve --port 8000
+2025-04-21 23:19:32,453 INFO /home/thanhkhaii/frappe-nutrition/frappe-nutrition/env/bin/bench worker
+2025-04-21 23:20:03,766 INFO /home/thanhkhaii/frappe-nutrition/frappe-nutrition/env/bin/bench use nutrition-site
+2025-04-21 23:20:07,573 INFO /home/thanhkhaii/frappe-nutrition/frappe-nutrition/env/bin/bench start
+2025-04-21 23:20:07,966 INFO /home/thanhkhaii/frappe-nutrition/frappe-nutrition/env/bin/bench watch
+2025-04-21 23:20:07,969 INFO /home/thanhkhaii/frappe-nutrition/frappe-nutrition/env/bin/bench serve --port 8000
+2025-04-21 23:20:07,973 INFO /home/thanhkhaii/frappe-nutrition/frappe-nutrition/env/bin/bench schedule
+2025-04-21 23:20:07,979 INFO /home/thanhkhaii/frappe-nutrition/frappe-nutrition/env/bin/bench worker
