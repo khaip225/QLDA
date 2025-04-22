@@ -10,3 +10,9 @@ Backup Summary for nutrition-site at 2025-04-21 22:30:04.171659
 Config  : ./nutrition-site/private/backups/20250421_223003-nutrition-site-site_config_backup.json 127.0B
 Database: ./nutrition-site/private/backups/20250421_223003-nutrition-site-database.sql.gz         225.6KiB
 Backup for Site nutrition-site has been successfully completed
+set -o pipefail; /usr/bin/mariadb-dump --user=_fc6e2c9000cfa666 --host=127.0.0.1 --port=3306 --password=********** --single-transaction --quick --lock-tables=false _fc6e2c9000cfa666 | /usr/bin/gzip >> ./nutrition-site/private/backups/20250422_103004-nutrition-site-database.sql.gz
+
+Backup Summary for nutrition-site at 2025-04-22 10:30:05.955232
+Config  : ./nutrition-site/private/backups/20250422_103004-nutrition-site-site_config_backup.json 127.0B
+Database: ./nutrition-site/private/backups/20250422_103004-nutrition-site-database.sql.gz         225.6KiB
+Backup for Site nutrition-site has been successfully completed

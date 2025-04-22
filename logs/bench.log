@@ -117,3 +117,4 @@
 2025-04-21 23:20:07,973 INFO /home/thanhkhaii/frappe-nutrition/frappe-nutrition/env/bin/bench schedule
 2025-04-21 23:20:07,979 INFO /home/thanhkhaii/frappe-nutrition/frappe-nutrition/env/bin/bench worker
 2025-04-22 00:00:01,620 INFO /home/thanhkhaii/frappe-env/bin/bench --verbose --site all backup
+2025-04-22 12:00:01,204 INFO /home/thanhkhaii/frappe-env/bin/bench --verbose --site all backup
