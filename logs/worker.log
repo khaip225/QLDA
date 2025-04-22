@@ -1,0 +1,161 @@
+2025-04-14 22:47:07,288 Worker rq:worker:eedbcc2e7a764615a1d75083c847b2bb started with PID 13337, version 2.2.0
+2025-04-14 22:47:07,288 Subscribing to channel rq:pubsub:eedbcc2e7a764615a1d75083c847b2bb
+2025-04-14 22:47:07,290 *** Listening on home-thanhkhaii-frappe-nutrition-frappe-nutrition:short, home-thanhkhaii-frappe-nutrition-frappe-nutrition:default, home-thanhkhaii-frappe-nutrition-frappe-nutrition:long...
+2025-04-14 22:47:07,291 Cleaning registries for queue: home-thanhkhaii-frappe-nutrition-frappe-nutrition:short
+2025-04-14 22:47:07,301 Cleaning registries for queue: home-thanhkhaii-frappe-nutrition-frappe-nutrition:default
+2025-04-14 22:47:07,305 Cleaning registries for queue: home-thanhkhaii-frappe-nutrition-frappe-nutrition:long
+2025-04-14 22:53:44,182 Unsubscribing from channel rq:pubsub:eedbcc2e7a764615a1d75083c847b2bb
+2025-04-14 22:54:24,354 Worker rq:worker:5a0ab15d998940fc9d2785961fb376f3 started with PID 13454, version 2.2.0
+2025-04-14 22:54:24,354 Subscribing to channel rq:pubsub:5a0ab15d998940fc9d2785961fb376f3
+2025-04-14 22:54:24,357 *** Listening on home-thanhkhaii-frappe-nutrition-frappe-nutrition:short, home-thanhkhaii-frappe-nutrition-frappe-nutrition:default, home-thanhkhaii-frappe-nutrition-frappe-nutrition:long...
+2025-04-14 22:54:24,358 Cleaning registries for queue: home-thanhkhaii-frappe-nutrition-frappe-nutrition:short
+2025-04-14 22:54:24,369 Cleaning registries for queue: home-thanhkhaii-frappe-nutrition-frappe-nutrition:default
+2025-04-14 22:54:24,376 Cleaning registries for queue: home-thanhkhaii-frappe-nutrition-frappe-nutrition:long
+2025-04-14 23:00:06,011 Worker 5a0ab15d998940fc9d2785961fb376f3 [PID 13454]: warm shut down requested
+Traceback (most recent call last):
+  File "/home/thanhkhaii/frappe-nutrition/frappe-nutrition/env/lib/python3.12/site-packages/redis/connection.py", line 592, in read_response
+    response = self._parser.read_response(disable_decoding=disable_decoding)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/thanhkhaii/frappe-nutrition/frappe-nutrition/env/lib/python3.12/site-packages/redis/_parsers/hiredis.py", line 128, in read_response
+    self.read_from_socket()
+  File "/home/thanhkhaii/frappe-nutrition/frappe-nutrition/env/lib/python3.12/site-packages/redis/_parsers/hiredis.py", line 88, in read_from_socket
+    bufflen = self._sock.recv_into(self._buffer)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/thanhkhaii/frappe-nutrition/frappe-nutrition/apps/frappe/frappe/utils/bench_helper.py", line 48, in invoke
+    return super().invoke(ctx)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/thanhkhaii/frappe-nutrition/frappe-nutrition/env/lib/python3.12/site-packages/click/core.py", line 1697, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/thanhkhaii/frappe-nutrition/frappe-nutrition/env/lib/python3.12/site-packages/click/core.py", line 1443, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/thanhkhaii/frappe-nutrition/frappe-nutrition/env/lib/python3.12/site-packages/click/core.py", line 788, in invoke
+    return __callback(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/thanhkhaii/frappe-nutrition/frappe-nutrition/apps/frappe/frappe/commands/scheduler.py", line 206, in start_worker
+    start_worker(
+  File "/home/thanhkhaii/frappe-nutrition/frappe-nutrition/apps/frappe/frappe/utils/background_jobs.py", line 341, in start_worker
+    worker.work(
+  File "/home/thanhkhaii/frappe-nutrition/frappe-nutrition/env/lib/python3.12/site-packages/rq/worker.py", line 655, in work
+    self.teardown()
+  File "/home/thanhkhaii/frappe-nutrition/frappe-nutrition/env/lib/python3.12/site-packages/rq/worker.py", line 1156, in teardown
+    self.register_death()
+  File "/home/thanhkhaii/frappe-nutrition/frappe-nutrition/env/lib/python3.12/site-packages/rq/worker.py", line 903, in register_death
+    p.execute()
+  File "/home/thanhkhaii/frappe-nutrition/frappe-nutrition/env/lib/python3.12/site-packages/redis/client.py", line 1524, in execute
+    conn = self.connection_pool.get_connection("MULTI", self.shard_hint)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/thanhkhaii/frappe-nutrition/frappe-nutrition/env/lib/python3.12/site-packages/redis/connection.py", line 1422, in get_connection
+    connection.connect()
+  File "/home/thanhkhaii/frappe-nutrition/frappe-nutrition/env/lib/python3.12/site-packages/redis/connection.py", line 369, in connect
+    self.on_connect()
+  File "/home/thanhkhaii/frappe-nutrition/frappe-nutrition/env/lib/python3.12/site-packages/redis/connection.py", line 471, in on_connect
+    self.read_response()
+  File "/home/thanhkhaii/frappe-nutrition/frappe-nutrition/env/lib/python3.12/site-packages/redis/connection.py", line 600, in read_response
+    raise ConnectionError(
+redis.exceptions.ConnectionError: Error while reading from 127.0.0.1:11000 : (104, 'Connection reset by peer')
+
+Error while reading from 127.0.0.1:11000 : (104, 'Connection reset by peer')
+
+WARNING: currentsite.txt is not supported anymore for setting default site. Use following command to set it as default site.
+$ bench use nutrition-site
+
+2025-04-14 23:03:00,008 Worker rq:worker:6b29d3bccf7a4cc4ad085ea9c95e0c02 started with PID 13600, version 2.2.0
+2025-04-14 23:03:00,008 Subscribing to channel rq:pubsub:6b29d3bccf7a4cc4ad085ea9c95e0c02
+2025-04-14 23:03:00,012 *** Listening on home-thanhkhaii-frappe-nutrition-frappe-nutrition:short, home-thanhkhaii-frappe-nutrition-frappe-nutrition:default, home-thanhkhaii-frappe-nutrition-frappe-nutrition:long...
+2025-04-14 23:03:00,013 Cleaning registries for queue: home-thanhkhaii-frappe-nutrition-frappe-nutrition:short
+2025-04-14 23:03:00,016 Cleaning registries for queue: home-thanhkhaii-frappe-nutrition-frappe-nutrition:default
+2025-04-14 23:03:00,019 Cleaning registries for queue: home-thanhkhaii-frappe-nutrition-frappe-nutrition:long
+2025-04-14 23:09:40,080 Unsubscribing from channel rq:pubsub:6b29d3bccf7a4cc4ad085ea9c95e0c02
+
+WARNING: currentsite.txt is not supported anymore for setting default site. Use following command to set it as default site.
+$ bench use nutrition-site
+
+2025-04-14 23:11:34,509 Worker rq:worker:e7fb471f1a1c4514912a049af42261ef started with PID 13759, version 2.2.0
+2025-04-14 23:11:34,510 Subscribing to channel rq:pubsub:e7fb471f1a1c4514912a049af42261ef
+2025-04-14 23:11:34,512 *** Listening on home-thanhkhaii-frappe-nutrition-frappe-nutrition:short, home-thanhkhaii-frappe-nutrition-frappe-nutrition:default, home-thanhkhaii-frappe-nutrition-frappe-nutrition:long...
+2025-04-14 23:11:34,513 Cleaning registries for queue: home-thanhkhaii-frappe-nutrition-frappe-nutrition:short
+2025-04-14 23:11:34,520 Cleaning registries for queue: home-thanhkhaii-frappe-nutrition-frappe-nutrition:default
+2025-04-14 23:11:34,522 Cleaning registries for queue: home-thanhkhaii-frappe-nutrition-frappe-nutrition:long
+2025-04-14 23:13:13,367 Worker e7fb471f1a1c4514912a049af42261ef [PID 13759]: warm shut down requested
+Traceback (most recent call last):
+  File "/home/thanhkhaii/frappe-nutrition/frappe-nutrition/env/lib/python3.12/site-packages/redis/connection.py", line 592, in read_response
+    response = self._parser.read_response(disable_decoding=disable_decoding)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/thanhkhaii/frappe-nutrition/frappe-nutrition/env/lib/python3.12/site-packages/redis/_parsers/hiredis.py", line 128, in read_response
+    self.read_from_socket()
+  File "/home/thanhkhaii/frappe-nutrition/frappe-nutrition/env/lib/python3.12/site-packages/redis/_parsers/hiredis.py", line 88, in read_from_socket
+    bufflen = self._sock.recv_into(self._buffer)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/thanhkhaii/frappe-nutrition/frappe-nutrition/apps/frappe/frappe/utils/bench_helper.py", line 48, in invoke
+    return super().invoke(ctx)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/thanhkhaii/frappe-nutrition/frappe-nutrition/env/lib/python3.12/site-packages/click/core.py", line 1697, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/thanhkhaii/frappe-nutrition/frappe-nutrition/env/lib/python3.12/site-packages/click/core.py", line 1443, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/thanhkhaii/frappe-nutrition/frappe-nutrition/env/lib/python3.12/site-packages/click/core.py", line 788, in invoke
+    return __callback(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/thanhkhaii/frappe-nutrition/frappe-nutrition/apps/frappe/frappe/commands/scheduler.py", line 206, in start_worker
+    start_worker(
+  File "/home/thanhkhaii/frappe-nutrition/frappe-nutrition/apps/frappe/frappe/utils/background_jobs.py", line 341, in start_worker
+    worker.work(
+  File "/home/thanhkhaii/frappe-nutrition/frappe-nutrition/env/lib/python3.12/site-packages/rq/worker.py", line 655, in work
+    self.teardown()
+  File "/home/thanhkhaii/frappe-nutrition/frappe-nutrition/env/lib/python3.12/site-packages/rq/worker.py", line 1156, in teardown
+    self.register_death()
+  File "/home/thanhkhaii/frappe-nutrition/frappe-nutrition/env/lib/python3.12/site-packages/rq/worker.py", line 903, in register_death
+    p.execute()
+  File "/home/thanhkhaii/frappe-nutrition/frappe-nutrition/env/lib/python3.12/site-packages/redis/client.py", line 1524, in execute
+    conn = self.connection_pool.get_connection("MULTI", self.shard_hint)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/thanhkhaii/frappe-nutrition/frappe-nutrition/env/lib/python3.12/site-packages/redis/connection.py", line 1422, in get_connection
+    connection.connect()
+  File "/home/thanhkhaii/frappe-nutrition/frappe-nutrition/env/lib/python3.12/site-packages/redis/connection.py", line 369, in connect
+    self.on_connect()
+  File "/home/thanhkhaii/frappe-nutrition/frappe-nutrition/env/lib/python3.12/site-packages/redis/connection.py", line 471, in on_connect
+    self.read_response()
+  File "/home/thanhkhaii/frappe-nutrition/frappe-nutrition/env/lib/python3.12/site-packages/redis/connection.py", line 600, in read_response
+    raise ConnectionError(
+redis.exceptions.ConnectionError: Error while reading from 127.0.0.1:11000 : (104, 'Connection reset by peer')
+
+Error while reading from 127.0.0.1:11000 : (104, 'Connection reset by peer')
+2025-04-14 23:15:24,908 Worker rq:worker:7b2dabce272c4c24a80727742d0943a2 started with PID 13899, version 2.2.0
+2025-04-14 23:15:24,909 Subscribing to channel rq:pubsub:7b2dabce272c4c24a80727742d0943a2
+2025-04-14 23:15:24,914 *** Listening on home-thanhkhaii-frappe-nutrition-frappe-nutrition:short, home-thanhkhaii-frappe-nutrition-frappe-nutrition:default, home-thanhkhaii-frappe-nutrition-frappe-nutrition:long...
+2025-04-14 23:15:24,915 Cleaning registries for queue: home-thanhkhaii-frappe-nutrition-frappe-nutrition:short
+2025-04-14 23:15:24,918 Cleaning registries for queue: home-thanhkhaii-frappe-nutrition-frappe-nutrition:default
+2025-04-14 23:15:24,922 Cleaning registries for queue: home-thanhkhaii-frappe-nutrition-frappe-nutrition:long
+2025-04-14 23:22:04,405 Unsubscribing from channel rq:pubsub:7b2dabce272c4c24a80727742d0943a2
+2025-04-15 09:10:03,925 Worker rq:worker:af1253fcc5bc494991909c1d39860e92 started with PID 1326, version 1.15.1
+2025-04-15 09:10:03,926 Subscribing to channel rq:pubsub:af1253fcc5bc494991909c1d39860e92
+2025-04-15 09:10:03,927 *** Listening on home-thanhkhaii-frappe-nutrition-frappe-nutrition:short, home-thanhkhaii-frappe-nutrition-frappe-nutrition:default, home-thanhkhaii-frappe-nutrition-frappe-nutrition:long...
+2025-04-15 09:10:03,928 Cleaning registries for queue: home-thanhkhaii-frappe-nutrition-frappe-nutrition:short
+2025-04-15 09:10:03,931 Cleaning registries for queue: home-thanhkhaii-frappe-nutrition-frappe-nutrition:default
+2025-04-15 09:10:03,933 Cleaning registries for queue: home-thanhkhaii-frappe-nutrition-frappe-nutrition:long
+2025-04-15 09:11:08,966 Worker af1253fcc5bc494991909c1d39860e92 [PID 1326]: warm shut down requested
+2025-04-21 23:19:33,321 Worker rq:worker:b9d73249d14c4f109408333c15615845 started with PID 1320, version 1.15.1
+2025-04-21 23:19:33,322 Subscribing to channel rq:pubsub:b9d73249d14c4f109408333c15615845
+2025-04-21 23:19:33,325 *** Listening on home-thanhkhaii-frappe-nutrition-frappe-nutrition:short, home-thanhkhaii-frappe-nutrition-frappe-nutrition:default, home-thanhkhaii-frappe-nutrition-frappe-nutrition:long...
+2025-04-21 23:19:33,327 Cleaning registries for queue: home-thanhkhaii-frappe-nutrition-frappe-nutrition:short
+2025-04-21 23:19:33,331 Cleaning registries for queue: home-thanhkhaii-frappe-nutrition-frappe-nutrition:default
+2025-04-21 23:19:33,334 Cleaning registries for queue: home-thanhkhaii-frappe-nutrition-frappe-nutrition:long
+2025-04-21 23:19:48,102 Worker b9d73249d14c4f109408333c15615845 [PID 1320]: warm shut down requested
+2025-04-21 23:20:08,504 Worker rq:worker:68f2eb06294d4b2194d8e11816cd7d16 started with PID 1928, version 1.15.1
+2025-04-21 23:20:08,504 Subscribing to channel rq:pubsub:68f2eb06294d4b2194d8e11816cd7d16
+2025-04-21 23:20:08,506 *** Listening on home-thanhkhaii-frappe-nutrition-frappe-nutrition:short, home-thanhkhaii-frappe-nutrition-frappe-nutrition:default, home-thanhkhaii-frappe-nutrition-frappe-nutrition:long...
+2025-04-21 23:26:25,251 Worker 68f2eb06294d4b2194d8e11816cd7d16 [PID 1928]: warm shut down requested

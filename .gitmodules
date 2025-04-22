@@ -1,0 +1,6 @@
+[submodule "apps/frappe"]
+	path = apps/frappe
+	url = https://github.com/frappe/frappe.git
+[submodule "apps/nutrition_recommender"]
+	path = apps/nutrition_recommender
+	url = https://github.com/khaip225/nutrition_recommender.git
