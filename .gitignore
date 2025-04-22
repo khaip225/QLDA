@@ -1,17 +1,18 @@
+# Bỏ qua thư mục virtual environment
+env/
+
+# Bỏ qua tệp cấu hình nhạy cảm
+sites/*/site_config.json
+sites/*/private/
+sites/*/public/files/
+sites/*/backups/
+
+# Bỏ qua log và cache
+logs/
+node_modules/
 *.pyc
+*.log
+
+# Bỏ qua tệp tạm
 *.swp
 *.swo
-*.log
-*.db
-*.sqlite3
-*.pid
-*.tar.gz
-*.zip
-
-env/
-node_modules/
-sites/*/private/*
-sites/assets/
-sites/*/backups/
-sites/common_site_config.json
-sites/*/site_config.json
